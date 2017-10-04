@@ -1,0 +1,101 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    color: #111;
+    font-family: "San Francisco", "Helvetica Neue", sans-serif;
+}
+body {
+    background-color: #f9f9f9;
+}
+#lego {
+    padding-top: 5vh;
+    height: 80vh;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    opacity: 0;
+    animation: appear .5s linear forwards;
+    animation-delay: 2.8s;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+    }
+}
+
+#hexagonSVG {
+    z-index: 99;
+    position: absolute;
+    top: 41%;
+    left: 50.07%;
+    transform: translate(-50%, -50%);
+
+    width: calc(80vh / 1.5 * 0.2643);
+    height: calc(80vh / 1.5 * 0.3643); 
+}
+
+#hexagonPath:hover {
+    cursor: pointer;
+}
+
+#logoSVG {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+    animation: fade .8s ease-out forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fade {
+    to {
+        opacity: 0;
+    }
+}
+
+#pathSVG {
+    stroke-dasharray: 1800;
+    stroke-dashoffset: 1800;
+    animation: dash 1.8s linear forwards;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#content {
+    background-color: #f9f9f9;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    line-height: 1.7;
+
+    opacity: 0;
+    animation: appear .5s linear forwards;
+    animation-delay: 2.8s;
+}
+
+#content h1 {
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+}
+
+#content ul {
+    margin: 0 auto;
+    display: flex;
+    max-width: 30em;
+    justify-content: space-around;
+}
+#content li {
+    display: inline;
+}

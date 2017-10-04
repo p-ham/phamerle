@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>philipp hamerle</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <svg id="logoSVG" viewBox="0 0 450 575" width="50%" height="50%">
+        <g fill="none" stroke="#111" stroke-width="50px" stroke-linecap="round" stroke-linejoin="round">
+            <path id="pathSVG" d="M150 50 L 150 450 Q 25 450 25 362.5 Q 25 287.5 125 287.5 L 300 287.5 Q 425 287.5 425 200 Q 425 122.5 300 122.5 L 300 522.5"/>
+        </g>
+    </svg>
+    <img src="lego.png" alt="me as a lego figurine" id="lego" onmouseover="hover();" onmouseout="unhover();">
+    <svg onmouseover="hover();" id="hexagonSVG" viewBox="50 25 605 630">
+        <g fill="rgba(0,0,0,0)" stroke="none">
+            <path onmouseout="hover();" onclick="clickpath();" id="hexagonPath" d="M350 25 L650 200 L650 575 L350 750 L50 575 L50 200 Z"/>
+        </g>
+    </svg>
+    <div id="content">
+        <h1>philipp hamerle</h1>
+        <p>👨🏼‍🎓webdev student at <a href="https://twitter.com/fhsalzburg" target="_blank">fh salzburg</a></p>
+        <ul>
+            <li>🐦<a href="https://twitter.com/philipp_ham" target="_blank">twitter</a></li>
+            <li>👨🏼‍💻<a href="https://codepen.io/philipp_ham/" target="_blank">codepen</a></li>
+            <li>📧<a href="mailto:philipp.hamerle@gmail.com">e-mail</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function hover() {
+            document.getElementById("lego").setAttribute('src', 'lego2.png');
+        }
+        function unhover() {
+            document.getElementById("lego").setAttribute('src', 'lego.png');
+        }
+        function clickpath() {
+            document.getElementById("lego").setAttribute('src', 'lego3.png');
+        }
+    </script>
+</body>
+</html>
